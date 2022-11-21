@@ -6,12 +6,14 @@ import java.util.List;
 
 public class Utils {
     public static boolean isAllPositiveNumbers(List<String> args) {
-
+        if (args.size() == 0) {
+            return false;
+        }
         boolean isAllPositive = true;
         for (String str : args
         ) {
 
-            if (!NumberUtils.isCreatable(str) && !NumberUtils.isDigits(str)) {
+            if (!NumberUtils.isCreatable(str)) {
                 return false;
             }
             if (NumberUtils.createNumber(str).doubleValue() < 0) {
