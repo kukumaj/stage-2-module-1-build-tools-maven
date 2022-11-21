@@ -16,7 +16,7 @@ public class Utils {
             if (!NumberUtils.isCreatable(str)) {
                 return false;
             }
-            if (NumberUtils.createNumber(str).doubleValue() < 0) {
+            if (NumberUtils.createNumber(str).doubleValue() <= 0) {
                 return false;
             }
         }
