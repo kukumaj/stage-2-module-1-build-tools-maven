@@ -11,7 +11,7 @@ public class Utils {
         for (String str : args
         ) {
 
-            if (!NumberUtils.isCreatable(str) && !NumberUtils.isParsable(str)) {
+            if (!NumberUtils.isCreatable(str) && !NumberUtils.isDigits(str)) {
                 return false;
             }
             if (NumberUtils.createNumber(str).doubleValue() < 0) {
